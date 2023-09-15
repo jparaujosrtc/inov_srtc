@@ -40,6 +40,7 @@ km_litro_por_motorista = dados_gasolina.groupby(['Motorista'])['Km/litro'].mean(
 litro_hora_por_motorista = dados_diesel.groupby(['Motorista'])['Litros/Hora'].mean().reset_index()
 
 app = dash.Dash(__name__)
+server = app.server
 
 # Layout do aplicativo
 app.layout = html.Div([
